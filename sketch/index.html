@@ -1,0 +1,78 @@
+<!--
+https://api.instagram.com/oauth/authorize/?client_id=cd74ab3c320846bf8e134e332d251906&redirect_uri=http://localhost:8080/sketch/&response_type=token
+for purely javascript apps
+http://your-redirect-uri#access_token=ACCESS-TOKEN
+to get the access token
+-->
+<!-- https://api.instagram.com/v1/users/{user-id}/?access_token=ACCESS-TOKEN -->
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta charset="UTF-8"> -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title>Some title but who cares this is a pop up</title>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  	<!-- <script src="jquery-3.3.1.min.js"></script> -->
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="sketch.js"></script>
+	<title> Understanding how to deal with api's</title>
+	<style>
+		body{
+			width:600px;
+			height: 400px;
+			border: 1px solid black;
+		}
+		
+	</style>	
+</head>
+<body>
+	<!-- <base href="https://api.instagram.com/oauth/authorize/?client_id=cd74ab3c320846bf8e134e332d251906&redirect_uri=http://localhost/instaapi/sketch/&response_type=token" /> -->
+	<!-- <base target="oauth"> -->
+	<!-- <input type="text" id="usertoget" onclick="getDetails()"> -->
+	<h1> Your Profile</h1>
+		<p> 
+			<a href="https://api.instagram.com/oauth/authorize/?client_id=cd74ab3c320846bf8e134e332d251906&redirect_uri=http://localhost/instaapi/sketch/&response_type=token" > 
+				Log in
+			</a> 	
+		</p>
+		<table border="1">
+			<thead>
+				<tr rowspan="2">
+					<td> 
+						<img id="pp" src="" width="100px" height="100px" /> 
+					</td> 
+					<td id="following"> 
+						follows: 
+					</td>
+					<td id="followers"> 
+						followed: 
+					</td>
+					<td id="posts"> 
+						posts: 
+					</td>
+				</tr>
+				
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="4" id="username"> 
+						Username:
+					</td>
+				</tr>
+				<tr>
+					<td id="name" colspan="4">
+						name: 
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" id="bio">Bio </td>
+				</tr>
+			</tbody>
+		</table>
+</body>
+</html>
